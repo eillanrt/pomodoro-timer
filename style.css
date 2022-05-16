@@ -8,18 +8,8 @@
 body,
 #root {
   font-family: "Montserrat", sans-serif;
-  background-color: #FF6747;
   text-align: center;
   min-height: 100vh;
-}
-
-body {
-  padding: 12px 0;
-}
-
-header h1 {
-  font-family: "Kanit", sans-serif;
-  font-size: 3rem;
 }
 
 #root {
@@ -29,34 +19,41 @@ header h1 {
   justify-content: space-around;
 }
 
+header h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+}
+
 header {
-  font-family: "Arvo", serif;
+  height: 80px;
+  display: grid;
+  place-items: center;
 }
 
 #timer {
   width: 100%;
   display: grid;
+  grid-gap: 25px;
   place-items: center;
 }
 
 #control-timers {
   display: flex;
-  width: 640px;
+  width: 420px;
+  height: 80px;
   justify-content: space-around;
   align-items: center;
   font-size: 32px;
-  min-height: 200px;
 }
 
 #control-timers h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #timer-wrapper {
   padding: 12px 0;
-  background-color: #FC2424;
   border-radius: 20px;
-  width: 640px;
+  width: 420px;
   border: #191970 solid 3px;
 }
 
@@ -68,20 +65,22 @@ header {
   font-size: 60px;
   font-weight: bold;
   letter-spacing: 3px;
+  color: white;
 }
 
 button {
   display: block;
   background-color: transparent;
-  font-size: 1.5rem;
+  font-size: 30px;
   border: none;
   cursor: pointer;
 }
 
 footer {
   line-height: 1.5;
-  margin-top: 12px;
-  font-size: 1.1rem;
+  margin-top: 24px;
+  padding-bottom: 24px;
+  font-size: 14px;
 }
 
 a {
@@ -95,7 +94,7 @@ a {
   font-style: italic;
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 520px) {
   #control-timers {
     width: 90%;
   }
@@ -104,10 +103,22 @@ a {
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 440px) {
   #control-timers {
     flex-direction: column;
     justify-content: space-around;
-    min-height: 250px;
+    min-height: 200px;
+  }
+}
+
+@media only screen and (min-height: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root {
+    width: 100%;
+    min-height: 700px;
   }
 }
