@@ -14,9 +14,8 @@ const accurateInterval = function (fn, time) {
     return clearTimeout(timeout);
   };
   timeout = setTimeout(wrapper, nextAt - new Date().getTime());
-  return {
-    cancel: cancel
-  };
+
+  return { cancel };  
 };
 
 const Timer = () => {
